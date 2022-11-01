@@ -11,14 +11,14 @@ form.addEventListener("submit", function (event) {
   if (inputTask.value == "") {
     alert("Il faut ajouter du text");
   } else {
-    const newTask = createNewItem(inputTask.value); // creer une nouvelle tache 
-    toDoList.appendChild(newTask);  // l'afficher dans le ol la nouvelle tache
+    const newTask = createNewItem(inputTask.value);     // creer une nouvelle tache 
+    toDoList.appendChild(newTask);                     // l'afficher dans le ol la nouvelle tache
     inputTask.value = "";
     inputTask.focus();
     clear.classList.remove("d-none");
   }
 
-  clear.addEventListener("click", function () {  // clear tous les taches ajoutées
+  clear.addEventListener("click", function () {          // clear tous les taches ajoutées
     toDoList.innerHTML = "";
   });
 });
@@ -28,17 +28,17 @@ function createNewItem(inputValue) {
   const span = document.createElement("span");
   const delBtn = document.createElement("button");
   const editBtn = document.createElement("button");
-  span.textContent = inputValue; // la span prend la valeur de l'input
-  delBtn.textContent = "Supprimer"; // remplir le bouton avec un text 
+  span.textContent = inputValue;      // la span prend la valeur de l'input
+  delBtn.textContent = "Supprimer";   // remplir le bouton avec un text 
   editBtn.textContent = "Modifier";
-  task.appendChild(span);  // afficher la valeur dans la span
-  task.appendChild(delBtn);  //Afficher le button supprimer
-  task.appendChild(editBtn); //Afficher le button modifier
+  task.appendChild(span);        // afficher la valeur dans la span
+  task.appendChild(delBtn);      //Afficher le button supprimer
+  task.appendChild(editBtn);     //Afficher le button modifier
 
-  delBtn.addEventListener("click", function () { // en cliquant sur le bouton supprimer il supprimer la tache 
+  delBtn.addEventListener("click", function () {   // en cliquant sur le bouton supprimer il supprimer la tache 
     task.parentNode.removeChild(task);
   });
-  editBtn.addEventListener("click", function () { // en cliquant sur le bouton modifier il modifie la tache 
+  editBtn.addEventListener("click", function () {  // en cliquant sur le bouton modifier il modifie la tache 
     span.contentEditable = true;
     span.focus();
   });
