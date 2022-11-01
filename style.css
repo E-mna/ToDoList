@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(130, 158, 167);
+  margin: 0%;
+  padding: 0%;
+  font-family: "Poppins", sans-serif;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  color: white;
+  font-size: 40px;
+  margin: 0 20px;
+}
+
+.todolist {
+  width: 530px;
+  min-height: 300px;
+  border: 1px solid rgb(199, 198, 198);
+  border-radius: 20px 20px 60px 60px;
+  padding: 20px 20px 100px 20px;
+  margin-top: 30px;
+  background-image: radial-gradient(rgb(120, 177, 194), rgb(116, 151, 151));
+}
+
+.todolist li {
+  color: white;
+  font-size: 24px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid white;
+  word-break: break-word;
+}
+li button {
+  float: right;
+  color: rgb(99, 98, 98);
+  margin-left: 5px;
+  padding: 5px;
+  font-size: 20px;
+  border-radius: 15px;
+  border: none;
+  transition: 0.2s all ease-in-out;
+}
+
+li button:hover {
+  background-color: rgba(125, 122, 128, 0.253);
+  color: rgb(70, 70, 70);
+}
+#inputtask {
+  min-width: 300px;
+  padding: 10px 15px;
+  border-radius: 15px;
+  border: none;
+  font-size: 24px;
+  margin-right: 10px;
+  color: rgb(115, 114, 116);
+}
+
+#inputtask:focus {
+  outline: none;
+}
+
+#addbutton,
+.clear {
+  color: rgb(86, 85, 87);
+  font-weight: 500;
+  font-size: 20px;
+  padding: 10px 15px;
+  margin-bottom: 25px;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  transition: 0.3s all ease-in-out;
+}
+#addbutton:hover,
+.clear:hover {
+  background-color: rgba(125, 122, 128, 0.253);
+  color: rgb(70, 70, 70);
+  transform: scale(0.97);
+}
+.d-none {
+  display: none;
+}
+
+li span:focus {
+  background-color: rgb(231, 231, 231);
+  color: black;
+  outline: none;
+  padding: 0 5px;
+  border-radius: 10px;
+  display: inline-block;
+  min-width: 200px;
+  max-width: 250px;
+}
+
+.link {
+  text-align: center;
+  margin: 20px;
+}
+.link a {
+  color: white;
+}
